@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background-color: #2f2235;
+  background-color: #412752;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -28,7 +28,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2f2235;
+  background-color: #412752;
 }
 
 .footer {
@@ -36,7 +36,7 @@ body {
   height: 4vh;
   padding: 1em;
   margin-top: -1em;
-  background-color: #2f2235;
+  background-color: #412752;
 }
 
 
@@ -65,8 +65,8 @@ body {
 }
 
 .pfp {
-  height: 90px;
-  width: 90px;
+  height: 95px;
+  width: 95px;
   vertical-align: middle;
   margin-right: 1em;
   border-radius: 50%;
@@ -89,15 +89,15 @@ body {
 .copyright>p {
   font-family: 'Fira Sans', sans-serif;
   font-size: 15px;
-  color: #554350;
+  color: #d3acc8;
 }
 
 .copyright>p>a {
-  color: #554350;
+  color: #d3acc8;
 }
 
 .copyright>p>a:visited {
-  color: #554350;
+  color: #d3acc8;
 }
 
 .links {
