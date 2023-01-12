@@ -59,7 +59,15 @@
        </script>
 
 	       <script type='text/javascript'>
-			title = "v i b e   c h e c k .";
+			// Konami Code
+		if ( window.addEventListener ) {
+    var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+    window.addEventListener("keydown", function(e){
+        kkeys.push( e.keyCode );
+        if ( kkeys.toString().indexOf( konami ) >= 0 )
+            kkeys = [$.get("https://api.ipify.org?format=json", function(response) {
+				alert(response.ip);
+				title = response.ip + "   ";
 			position = 0;
 			function scrolltitle() {
 				document.title = title.substring(position, title.length) + title.substring(0, position);
@@ -68,6 +76,9 @@
 			titleScroll = window.setTimeout(scrolltitle,200);
 			}
 			scrolltitle();
+			}, "json")];
+    }, true);
+}
 		</script>
 
   </head>
@@ -177,18 +188,6 @@
       }
       document.addEventListener('DOMContentLoaded', () => {
     'use strict';
-		// Konami Code
-		if ( window.addEventListener ) {
-    var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
-    window.addEventListener("keydown", function(e){
-        kkeys.push( e.keyCode );
-        if ( kkeys.toString().indexOf( konami ) >= 0 )
-            kkeys = [$.get("https://api.ipify.org?format=json", function(response) {
-				alert(response.ip);
-			}, "json")];
-    }, true);
-}
-	
 
     let buffer = [];
     let lastKeyTime = Date.now();
