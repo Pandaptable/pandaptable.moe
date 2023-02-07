@@ -237,12 +237,25 @@
 			});
 		});
 
-	// F12 Check
-	document.addEventListener("keydown", function(event) {
-  	if (event.keyCode == 123) {
-    badApple()
-  }
-});
+		// F12 Check
+		document.addEventListener("keydown", function (event) {
+			if (event.keyCode == 123) {
+				badApple()
+			}
+		});
+
+		// Disable right click
+		if (document.addEventListener) {
+			document.addEventListener('contextmenu', function (e) {
+				alert(":trolley:");
+				e.preventDefault();
+			}, false);
+		} else {
+			document.attachEvent('oncontextmenu', function () {
+				alert(":trolley:");
+				window.event.returnValue = false;
+			});
+		}
 	</script>
 </body>
 </html>
