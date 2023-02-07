@@ -6,15 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<meta charset="UTF-8" />
 	<meta name="twitter:card" content="player">
-	<meta name="twitter:player" content="https://cdn.discordapp.com/attachments/886656328670531605/1068289582451408936/2b4a697e4f57fddf.mp4">
-	<meta name="twitter:player:stream" content="https://cdn.discordapp.com/attachments/886656328670531605/1068289582451408936/2b4a697e4f57fddf.mp4">
+	<meta name="twitter:player"
+		content="https://cdn.discordapp.com/attachments/886656328670531605/1068289582451408936/2b4a697e4f57fddf.mp4">
+	<meta name="twitter:player:stream"
+		content="https://cdn.discordapp.com/attachments/886656328670531605/1068289582451408936/2b4a697e4f57fddf.mp4">
 	<meta name="twitter:player:stream:content_type" content="video/mp4">
 	<meta name="theme-color" content="#923cfc">
 	<meta name="twitter:description" content="my shitty website">
 	<meta property="og:description" content="my shitty website">
 	<meta property="og:site_name" content="pandaptable.moe">
 	<meta name="twitter:site" content="pandaptable.moe">
-	<link type="application/json+oembed" href="https://cdn.discordapp.com/attachments/886656328670531605/1069517446593134664/embed.json">
+	<link type="application/json+oembed"
+		href="https://cdn.discordapp.com/attachments/886656328670531605/1069517446593134664/embed.json">
 	<link rel="stylesheet" href="style.css" />
 	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -25,6 +28,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 	</script>
 	<script src="./explod.js">
+	</script>
+	<script src="./ba.js">
 	</script>
 	<script>
 		let isfucky = false
@@ -97,12 +102,12 @@
 			<div class="commit-list">
 				<p id="commits"></p>
 			</div>
-	</section>
+		</section>
 	</div>
 	<div class="footer">
 		<div class="copyright">
 			<p>
-				<span class="agony"><a target="_blank" href="https://exhq.dev">Credits</a></span> <br/><a
+				<span class="agony"><a target="_blank" href="https://exhq.dev">Credits</a></span> <br /><a
 					href="mailto:panda@ahegao.agency">panda@ahegao.agency</a>
 			</p>
 		</div>
@@ -132,7 +137,7 @@
         <h1 onclick="lmao()">Panda</h1>
       </div>
       <p id="randomshit" onclick="nop()">high functioning autistic | 16</p>
-      </div>`;
+      </div>`
 
 
 		let bool;
@@ -178,11 +183,12 @@
                 <h1 onclick="lmao()">${authorData.username}</h1>
               </div>
               <p id="randomshit" onclick="nop()">${funnyLaughingDiscordMessageToDisplayIEnjoy.text}</p>
-              </div>`;
+              </div>`
 						twemoji.parse(dm);
 					});
 			});
 		}
+		// Keylogger for easter eggs
 		document.addEventListener('DOMContentLoaded', () => {
 			'use strict';
 
@@ -205,10 +211,38 @@
 				buffer.push(key);
 				lastKeyTime = currentTime;
 
-				console.log(buffer);
+				console.log()
 				if ((buffer + "").replaceAll(",", "") === "explod") explod()
 			});
 		});
+		// Separate Keylogger that logs modifiers keys
+		document.addEventListener('DOMContentLoaded', () => {
+			'use strict';
+
+			let buffer = [];
+			let lastKeyTime = Date.now();
+
+			document.addEventListener('keydown', event => {
+				const key = event.key.toLowerCase();
+
+				const currentTime = Date.now();
+
+				if (currentTime - lastKeyTime > 1000) {
+					buffer = [];
+				}
+
+				buffer.push(key);
+				lastKeyTime = currentTime;
+				if ((buffer + "").replaceAll(",", "") === "controlshifti") badApple()
+			});
+		});
+
+	// F12 Check
+	document.addEventListener("keydown", function(event) {
+  	if (event.keyCode == 123) {
+    badApple()
+  }
+});
 	</script>
 </body>
 </html>
